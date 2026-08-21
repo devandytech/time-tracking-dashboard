@@ -22,10 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const previousSocialHour = document.querySelector('.previous-social-hours');
   const previousSelfCareHour = document.querySelector('.previous-selfcare-hours');
 
-  /* ENCOUNTERED BUG 1:
-    when z-index just gave me hell lol stacking problems and buttons wasn't clicking and i was trying to find where i was wrong  for an 1hr plus lol
-    UPDATE 1: ON 16:33 PM AUG 5 2026
-    Still not solved lol, it breaking the ui for now will be fixed when the script have been written */
   // using asynchronous functions to manipulate data
   async function fetchData() {
     const response = await fetch("data.json");
