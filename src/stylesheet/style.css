@@ -1,14 +1,14 @@
 .exp {
   background-repeat: no-repeat;
 }
-.white-text, footer {
+.white-text, footer, .daily-button:active, .weekly-button:active, .monthly-button:active, .daily-button:hover, .weekly-button:hover, .monthly-button:hover, .daily-button:focus, .weekly-button:focus, .monthly-button:focus {
   color: white;
 }
 .daily-button, .weekly-button, .monthly-button {
   cursor: pointer;
 }
-.child2-detail:hover {
-  background-color: hsl(236,100%,87%);
+.detail-hovering:hover {
+  background-color: hsl(236, 41%, 34%);
   cursor: pointer;
 }
 .attribution { 
