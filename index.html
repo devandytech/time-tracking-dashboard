@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <script src="https://jsdelivr.net"></script>
-  <script src="https://cdn.tailwindcss.com"><script/>
+  <script src="https://cdn.tailwindcss.com"><script>
   <script src="/src/script/script.js"></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
@@ -19,36 +19,33 @@
   <!-- child container -->
   <div class="container w-[90%] mx-auto mt-3 text-[18px]  text-[hsl(236,100%,87%)] md:w-[90%] md:grid md:grid-cols-4 md:grid-rows-2 md:gap-y-5 md:gap-x-5 md:mb-10">
     <!-- sub container for child and hero(carrying the profile details) -->
-    <div class="child1 mb-5 md:w-[100%] md:pb-0 md:mb-0 md:row-span-2">
+    <div class="child1 mb-5 md:w-[100%] md:pb-0 md:mb-0 md:row-span-2 flex flex-col">
       <!-- inner subset container -->
-      <div class="sub-inner-child1 py-9 pl-5 rounded-2xl bg-[hsl(246,80%,60%)] flex md:flex-col md:rounded-xl md:pt-5 md:pb-[4em]">
-        <img class="w-[75px] h-[72px] mr-6 rounded-[50%] border-4 border-solid border-[hsl(236,100%,87%)] md:mb-8" src="src/image/image-jeremy.png" alt="profile image of jeremy" />
-        <div class="w-[70%] my-auto ">
+      <div class="sub-inner-child1 py-9 pl-5 rounded-2xl z-10 bg-[hsl(246,80%,60%)] flex md:flex-col md:rounded-xl md:pt-5 md:pb-[3.1em]">
+        <img class="w-[75px] h-[72px] mr-6 rounded-[50%] border-2 border-solid border-[hsl(236,100%,87%)] md:mb-8" src="image-jeremy.png" alt="profile image of jeremy" />
+        <div class="w-[70%] my-auto md:w-ful">
           <p class="text-[18px] font-[300] md:text-[13px]">Report for</p>
-          <p class="text-[35px] font-[500]">Jeremy Robson</p>
+          <p class="white-text text-[35px] font-[500] md:text-[25px] md:leading-tight">Jeremy Robson</p>
         </div>    
       </div>
       
-      <div class="pt-10 pb-6 mt-[-20px] rounded-bl-2xl rounded-br-2xl relative  flex justify-around bg-[hsl(235,46%,20%)] md:flex-col md:pl-5 md:pt-5 md:pb-4 md:items-start md:rounded-xl ">
-        <button class="daily-button z-30 p-2 white-text font-[400] md:p-0 md:py-3 md:text-[13px]">Daily</button>
-        <button class="weekly-button z-30 font-[400] p-2 md:p-0 md:text-[13px]">Weekly</button>
-        <button class="monthly-button font-[400] z-30 p-2 md:p-0 md:py-3 md:text-[13px]">Monthly</button>
+      <div class="pt-10 pb-6 mt-[-20px] rounded-bl-2xl rounded-br-2xl none relative  flex justify-around bg-[hsl(235,46%,20%)] md:flex-col md:pl-5 md:pt-7 md:pb-4 md:items-start md:rounded-xl ">
+        <button class="daily-button p-2 font-[400] md:p-0 md:py-3 md:text-[13px]">Daily</button>
+        <button class="weekly-button font-[400] p-2 md:p-0 md:text-[13px]">Weekly</button>
+        <button class="monthly-button font-[400] p-2 md:p-0 md:pt-3 md:text-[13px]">Monthly</button>
       </div>
     </div>
     
     <!-- sub container for details -->
     <!-- Work -->
     <div class="child2 exp w-full mb-5 pt-10 rounded-2xl bg-[hsl(15,100%,70%)] bg-[url('icon-work.svg')] bg-[92%_-12px] md:mb-0 md:rounded-xl">
-      <!-- <div class="  w-[90%] pt-[-10px] pb-8  mx-auto rounded-sm border border-solid border-black">
-        
-      </div>-->
-      <div class="child2-detail sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-6 md:items-start ">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-3 md:items-start ">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Work</p>
           <button type="submit"><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text font-[500] text-[25px] md:text-[40px] md:font-sm"><span class="present-work-hours">5</span>hrs</p>
+          <p class="white-text font-[500] text-[25px] md:text-[30px] md:font-sm"><span class="present-work-hours">5</span>hrs</p>
           <p class="previous-work-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 7hrs</p>
         </div>
       </div>
@@ -56,13 +53,13 @@
     
     <!-- Play -->
     <div class="child3 exp mb-5 pt-10 rounded-2xl bg-[hsl(195,74%,62%)] bg-[url('icon-play.svg')] bg-[92%_-3px] md:mb-0 md:rounded-xl md:items-start">
-      <div class="sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-6">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-3">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Play</p>
           <button type="submit" class=""><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text text-[25px] font-[500] md:text-[40px] md:font-sm"><span class="present-play-hours">1</span>hrs</p>
+          <p class="white-text text-[25px] font-[500] md:text-[30px] md:font-sm"><span class="present-play-hours">1</span>hrs</p>
           <p class="previous-play-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 2hrs</p>
         </div>
       </div>
@@ -70,13 +67,13 @@
     
     <!-- Study -->
     <div class="child4 exp mb-5 pt-10 rounded-2xl bg-[hsl(348,100%,68%)] bg-[url('icon-study.svg')] bg-[92%_-3px] md:mb-0 md:rounded-xl">
-      <div class="sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)]  md:rounded-xl md:px-0 md:pt-3 md:pb-6">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)]  md:rounded-xl md:px-0 md:pt-3 md:pb-3">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Study</p>
           <button type="submit" class=""><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text text-[25px] font-[500] md:text-[40px] md:font-sm"><span class="present-study-hours">0</span>hrs</p>
+          <p class="white-text text-[25px] font-[500] md:text-[30px] md:font-sm"><span class="present-study-hours">0</span>hrs</p>
           <p class="previous-study-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 1hrs</p>
         </div>
       </div>
@@ -84,13 +81,13 @@
     
     <!-- Exercise -->
     <div class="child5 exp mb-5 pt-10 rounded-2xl bg-[hsl(145,58%,55%)] bg-[url('icon-exercise.svg')] bg-[95%_-1px] md:mb-0 md:mb-0 md:mb-0 md:mb-0 md:rounded-xl">
-      <div class="sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-6">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-3">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Exercise</p>
           <button type="submit" class=""><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text text-[25px] font-[500] md:text-[40px] md:font-sm"><span class="present-exercise-hours">1</span>hrs</p>
+          <p class="white-text text-[25px] font-[500] md:text-[30px] md:font-sm"><span class="present-exercise-hours">1</span>hrs</p>
           <p class="previous-exercise-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 1hrs</p>
         </div>
       </div>
@@ -98,13 +95,13 @@
     
     <!-- Social -->
     <div class="child2 exp mb-5 pt-10 rounded-2xl bg-[hsl(264,64,52%)] bg-[url('icon-social.svg')] bg-[95%_-14px] md:mb-0 md:mb-0 md:mb-0 md:mb-0 md:mb-0 md:rounded-xl">
-      <div class="sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-6">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-3">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Social</p>
           <button type="submit" class=""><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text text-[25px] font-[500] md:text-[40px] md:font-sm"><span class="present-social-hours">1</span>hrs</p>
+          <p class="white-text text-[25px] font-[500] md:text-[30px] md:font-sm"><span class="present-social-hours">1</span>hrs</p>
           <p class="previous-social-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 3hrs</p>
         </div>
       </div>
@@ -112,13 +109,13 @@
     
     <!-- Self Care -->
     <div class="child6 exp mb-5 pt-10 rounded-2xl bg-[hsl(43,84%,65%)] bg-[url('icon-self-care.svg')] bg-[95%_-9px] md:mb-0 md:rounded-xl">
-      <div class="sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-6">
+      <div class="detail-hovering sub-inner-child2 px-6 pt-6 pb-8 rounded-2xl bg-[hsl(235,46%,20%)] md:rounded-xl md:px-0 md:pt-3 md:pb-3">
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto ">
           <p class="white-text font-[400] md:text-[13px]">Self Care</p>
           <button type="submit" class=""><img src="icon-ellipsis.svg" alt="" /></button>
         </div>
         <div class="flex justify-between md:w-[80%] md:py-2 md:px-0 md:m-auto md:flex-col ">
-          <p class="white-text text-[25px] font-[500] md:text-[40px] md:font-sm"><span class="present-selfcare-hours">0</span>hrs</p>
+          <p class="white-text text-[25px] font-[500] md:text-[30px] md:font-sm"><span class="present-selfcare-hours">0</span>hrs</p>
           <p class="previous-selfcare-hours text-sm font-[300] my-auto md:font-bold md:text-[11px]">Previous - 1hrs</p>
         </div>
       </div>
@@ -126,9 +123,9 @@
     
   </div>
   
-  <footer class="attribution">
+  <footer class="attribution mb-3">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Oseremen Godstime</a>.
+    Coded by <a href="x.com/devandytech" target="_blank">Oseremen Godstime</a>.
   </footer> 
   
 </body>
