@@ -75,5 +75,5 @@ Well am really gratefull on how the mdn docs has refurbished my learning on usin
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/devandytech)
 - Twitter - [Andy](https://www.twitter.com/devandytech)
