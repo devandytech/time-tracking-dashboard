@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const previousExerciseHour = document.querySelector('.previous-exercise-hours');
   const previousSocialHour = document.querySelector('.previous-social-hours');
   const previousSelfCareHour = document.querySelector('.previous-selfcare-hours');
-
+  
+  // STEP 1:
   // using asynchronous functions to manipulate data
   async function fetchData() {
     const response = await fetch("data.json");
@@ -81,27 +82,27 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(data)
         // for work (weekly)
         workHours.textContent = data[0].timeframes.weekly.current;
-        previousWorkHour.textContent = `Previous - ${data[0].timeframes.weekly.previous}hrs`;
+        previousWorkHour.textContent = `Last Week - ${data[0].timeframes.weekly.previous}hrs`;
         
         // for play (weekly)
         playHours.textContent = data[1].timeframes.weekly.current;
-        previousPlayHour.textContent = `Previous - ${data[1].timeframes.weekly.previous}hrs`;
+        previousPlayHour.textContent = `Last Week - ${data[1].timeframes.weekly.previous}hrs`;
         
         // for study (weekly)
         studyHours.textContent = data[2].timeframes.weekly.current;
-        previousStudyHour.textContent = `Previous - ${data[2].timeframes.weekly.previous}hrs`;
+        previousStudyHour.textContent = `Last Week - ${data[2].timeframes.weekly.previous}hrs`;
         
         // For Exercise (weekly)
         exerciseHours.textContent = data[3].timeframes.weekly.current;
-        previousExerciseHour.textContent = `Previous - ${data[3].timeframes.weekly.previous}hrs`;
+        previousExerciseHour.textContent = `Last Week - ${data[3].timeframes.weekly.previous}hrs`;
         
         // For social (weekly)
         socialHours.textContent = data[4].timeframes.weekly.current;
-        previousSocialHour.textContent = `Previous - ${data[4].timeframes.weekly.previous}hrs`;
+        previousSocialHour.textContent = `Last Week - ${data[4].timeframes.weekly.previous}hrs`;
         
         // For selfcare (weekly)
         selfCareHours.textContent = data[5].timeframes.weekly.current;
-        previousSelfCareHour.textContent = `Previous - ${data[5].timeframes.weekly.previous}hrs`;
+        previousSelfCareHour.textContent = `Last Week - ${data[5].timeframes.weekly.previous}hrs`;
       })
     });
   };
@@ -114,27 +115,27 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(data)
         // for work (monthly )
         workHours.textContent = data[0].timeframes.monthly.current;
-        previousWorkHour.textContent = `Previous - ${data[0].timeframes.monthly.previous}hrs`;
+        previousWorkHour.textContent = `Last Month - ${data[0].timeframes.monthly.previous}hrs`;
         
         // for play (monthly)
         playHours.textContent = data[1].timeframes.monthly.current;
-        previousWorkHour.textContent = `Previous - ${data[1].timeframes.monthly.previous}hrs`;
+        previousPlayHour.textContent = `Last Month - ${data[1].timeframes.monthly.previous}hrs`;
         
         // for study (monthly)
         studyHours.textContent = data[2].timeframes.monthly.current;
-        previousStudyHour.textContent = `Previous - ${data[2].timeframes.monthly.previous}hrs`;
+        previousStudyHour.textContent = `Last Month - ${data[2].timeframes.monthly.previous}hrs`;
         
         // for exercise (monthly)
         exerciseHours.textContent = data[3].timeframes.monthly.current;
-        previousExerciseHour.textContent = `Previous - ${data[3].timeframes.monthly.previous}hrs`;
+        previousExerciseHour.textContent = `Last Month - ${data[3].timeframes.monthly.previous}hrs`;
         
         // For social (monthly)
         socialHours.textContent = data[4].timeframes.monthly.current;
-        previousSocialHour.textContent = `Previous - ${data[4].timeframes.monthly.previous}hrs`;
+        previousSocialHour.textContent = `Last Month - ${data[4].timeframes.monthly.previous}hrs`;
         
         // For Selfcare (monthly)
         selfCareHours.textContent = data[5].timeframes.monthly.current;
-        previousSelfCareHour.textContent = `Previous - ${data[5].timeframes.monthly.previous}hrs`;
+        previousSelfCareHour.textContent = `Last Month - ${data[5].timeframes.monthly.previous}hrs`;
       })
     })
   };
