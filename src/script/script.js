@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const dailyBtn = document.querySelector('.daily-button');
   const weeklyBtn = document.querySelector('.weekly-button');
   const monthlyBtn = document.querySelector('.monthly-button');
-  console.log(dailyBtn, weeklyBtn, monthlyBtn);
   
   // All element that are going to be updated(with data, current hours)
   const workHours = document.querySelector('.present-work-hours');
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const exerciseHours = document.querySelector('.present-exercise-hours');
   const socialHours = document.querySelector('.present-social-hours');
   const selfCareHours = document.querySelector('.present-selfcare-hours');
-  console.log(workHours,playHours,studyHours,exerciseHours,socialHours,selfCareHours)
   
   // elements for previous hours
   const previousWorkHour = document.querySelector('.previous-work-hours');
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // using asynchronous functions to manipulate data
   async function fetchData() {
     const response = await fetch("./data.json");
-    console.log(response)
     // check for errors
     if (!response.ok) {
       throw new Error(`Failed to fetch: ${response.status}`)
@@ -43,10 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function clickDailyBtn() {
     dailyBtn.addEventListener('click', () => {
-      console.log('daily click button works!')
       const myData = fetchData();
       myData.then((data) => {
-        console.log(data)
         // For work (daily)
         workHours.textContent = data[0].timeframes.daily.current;
         previousWorkHour.textContent = `Previous - ${data[0].timeframes.daily.previous}hrs`;
@@ -71,15 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
         selfCareHours.textContent = data[5].timeframes.daily.current;
         previousSelfCareHour.textContent = `Previous - ${data[5].timeframes.daily.previous}hrs`;
       })
+      .catch((e) => e.message);
     })
   }
   
   function clickWeeklyBtn() {
     weeklyBtn.addEventListener('click', () => {
-      console.log('weekly click button works!')
       const myData = fetchData();
       myData.then((data) => {
-        console.log(data)
         // for work (weekly)
         workHours.textContent = data[0].timeframes.weekly.current;
         previousWorkHour.textContent = `Last Week - ${data[0].timeframes.weekly.previous}hrs`;
@@ -104,15 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
         selfCareHours.textContent = data[5].timeframes.weekly.current;
         previousSelfCareHour.textContent = `Last Week - ${data[5].timeframes.weekly.previous}hrs`;
       })
+      .catch((e) => e.message);
     });
   };
   
   function clickMonthlyBtn() {
     monthlyBtn.addEventListener('click', () => {
-      console.log('monthly click button works!')
       const myData = fetchData();
       myData.then((data) => {
-        console.log(data)
         // for work (monthly )
         workHours.textContent = data[0].timeframes.monthly.current;
         previousWorkHour.textContent = `Last Month - ${data[0].timeframes.monthly.previous}hrs`;
@@ -137,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         selfCareHours.textContent = data[5].timeframes.monthly.current;
         previousSelfCareHour.textContent = `Last Month - ${data[5].timeframes.monthly.previous}hrs`;
       })
+      .catch((e) => e.message);
     })
   };
   
