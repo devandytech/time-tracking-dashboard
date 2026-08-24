@@ -1,21 +1,3 @@
-// Create a visible box on your mobile screen for errors
-const logBox = document.createElement('div');
-logBox.style = "position:fixed; bottom:0; left:0; width:100%; max-height:150px; overflow-y:auto; background:rgba(0,0,0,0.85); color:#00ff00; font-family:monospace; font-size:12px; z-index:99999; padding:10px; box-sizing:border-box; border-top:2px solid red;";
-document.documentElement.appendChild(logBox);
-
-// Redirect console logs and errors to your phone screen
-window.onerror = function(msg, url, line) {
-  logBox.innerHTML += `<div style="color:red;">Error: ${msg} (Line ${line})</div>`;
-};
-console.log = function(msg) {
-  logBox.innerHTML += `<div>Log: ${JSON.stringify(msg)}</div>`;
-};
-
-// Test it immediately
-console.log("Mobile console initialized!");
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   // buttons
   const dailyBtn = document.querySelector('.daily-button');
