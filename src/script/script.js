@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // STEP 1:
   // using asynchronous functions to manipulate data
   async function fetchData() {
-    const response = await fetch("/data.json");
+    const response = await fetch("./data.json");
     console.log(response)
     // check for errors
     if (!response.ok) {
