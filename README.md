@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/devandytech/time-tracking-dashboard)
-- Live Site URL: [Live Site](https://time-tracking-dashboard-ebon.vercel.app/)
+- Live Site URL: [Live Site](https://time-tracking-dashboard-two-omega.vercel.app)
 
 ## My process
 
