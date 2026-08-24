@@ -62,6 +62,10 @@ async function fetchData() {
     return jsonData;
   }
 ```
+Not kidding :) omitting the defer in the script tag cost me almost an hour, never failing to add one on next project i learnt my lesson.
+```
+<script src="src/script/script.js" defer></script>
+```
 
 ### Continued development
 
